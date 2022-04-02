@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link, Button, Route } from 'react-router-dom';
+
+
 
 const OrderForm = (props) => {
     const { formValues, formUpdate, formSubmit, formErrors, disabled } = props;
@@ -45,7 +46,8 @@ return (
                   onChange={onChange}
                   checked={formValues.ham}
                   /> ham
-            </label> 
+            </label>
+            <div> 
             <label>
                <input
                   type='checkbox'
@@ -70,8 +72,7 @@ return (
                   checked={formValues.sausage}
                />
             </label> sausage
-
-         
+         </div>
 
          <label> Special Instructions
             <input id='special-text'

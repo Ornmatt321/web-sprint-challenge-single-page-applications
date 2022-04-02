@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import'./App.css';
 import axios from 'axios';
-import { Route, Link, Switch } from 'react-router-dom';
+import { Route } from 'react-router-dom';
+
 
 
 
@@ -27,7 +28,6 @@ const initialFormValues = {
 const initialFormErrors = {
   name: '',
   size: '',
-  submitBtn: '',
 }
 
 const initialFormDisabled = true;
@@ -39,7 +39,7 @@ const App = () => {
   const [ disabled, setDisabled ] = useState(initialFormDisabled);
 
   const formUpdate = (inputName, inputValue) => {
-    ValidityState(inputName, inputValue)
+    validate(inputName, inputValue)
     setFormValues({ ...formValues, [inputName]: inputValue})
   }
 
